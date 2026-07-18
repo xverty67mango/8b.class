@@ -11,7 +11,6 @@
     <link rel="icon" type="okay" href="favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
     <style>
-        /* Эти стили специально вставлены в эту страницу, чтобы лайтбокс точно был красивым */
         .lightbox {
             display: none;
             position: fixed;
@@ -52,11 +51,9 @@
 </head>
 <body>
 
-    <!-- ===== ЗАГОЛОВОК ===== -->
     <h1>Словарь дюгудюжников</h1>
     <p class="subtitle">Пояснение всех слов и мемов</p>
 
-    <!-- ===== МЕНЮ ===== -->
     <nav class="main-nav">
         <a href="index.html">Главная страница</a>
         <a href="gallery.html">Галерея класса</a>
@@ -70,7 +67,6 @@
 </div>
     <p style="margin-bottom: 20px;"><strong>Факты выделенные жирным шрифтом не являются подтвержденными.</strong></p>
 
-    <!-- ===== СЛОВАРЬ ===== -->
     <dl class="dictionary-list">
 
         <dt class="term"> Габсбурги </dt>
@@ -123,13 +119,11 @@
 
     </dl>
 
-<!-- ===== ЛАЙТБОКС (HTML-структура) ===== -->
 <div id="lightbox" class="lightbox">
     <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-    <!-- Картинка для лайтбокса (по умолчанию) -->
+    
     <img class="lightbox-content" id="lightboxImg" src="" style="display: none;">
 </div>
-    <!-- ===== ПОДВАЛ ===== -->
     <div class="footer">
         8Б лучшие <3
     </div>
@@ -140,38 +134,34 @@
 <script>
 
 const toggle = document.getElementById('themeToggle');
-// Проверяем, была ли сохранена темная тема
+
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-theme');
-    toggle.innerHTML = '<i class="fas fa-sun"></i>'; // Меняем на солнце и текст
+    toggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
-// При клике переключаем тему
+
 toggle.addEventListener('click', function() {
     document.body.classList.toggle('dark-theme');
     const isDark = document.body.classList.contains('dark-theme');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     
-    // Меняем иконку и текст (используем innerHTML, а не textContent!)
     this.innerHTML = isDark ? 
         '<i class="fas fa-sun"></i>': 
         '<i class="fas fa-moon"></i>';
 });
 </script>
 <script>
-// ============================================================
-// 1. СОБИРАЕМ ДАННЫЕ ДЛЯ ПОИСКА
-// ============================================================
+
 const terms = document.querySelectorAll('.term');
 const definitions = document.querySelectorAll('.definition');
 const searchInput = document.getElementById('tagSearchDict');
 const searchBtn = document.getElementById('searchBtnDict');
 const resetBtn = document.getElementById('resetBtnDict');
 
-// Лайтбокс (глобальные переменные)
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
-const lightboxVideo = document.getElementById('lightboxVideo'); // ← НОВОЕ
+const lightboxVideo = document.getElementById('lightboxVideo'); 
 
 let dictionaryData = [];
 terms.forEach((term, index) => {
@@ -183,9 +173,6 @@ terms.forEach((term, index) => {
     });
 });
 
-// ============================================================
-// 2. НАСТРОЙКА FUSE.JS
-// ============================================================
 const fuse = new Fuse(dictionaryData, {
     keys: ['text'],
     threshold: 0.4,
@@ -193,9 +180,6 @@ const fuse = new Fuse(dictionaryData, {
     minMatchCharLength: 2
 });
 
-// ============================================================
-// 3. ФУНКЦИЯ ПОДСВЕТКИ
-// ============================================================
 function highlightText(element, query) {
     const words = query.split(/\s+/);
     let html = element.innerHTML;
@@ -206,9 +190,6 @@ function highlightText(element, query) {
     element.innerHTML = html;
 }
 
-// ============================================================
-// 4. ЛАЙТБОКС (ОТКРЫТИЕ И ЗАКРЫТИЕ)
-// ============================================================
 function openLightbox(src) {
     if (lightbox && lightboxImg) {
         lightboxImg.src = src;
@@ -243,7 +224,6 @@ function closeLightbox() {
     }
 }
 
-// Закрытие по клику на фон
 if (lightbox) {
     lightbox.addEventListener('click', function(e) {
         if (e.target === this) {
@@ -252,16 +232,12 @@ if (lightbox) {
     });
 }
 
-// Закрытие по клавише ESC
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeLightbox();
     }
 });
 
-// ============================================================
-// 5. ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ ЛАЙТБОКСА (для картинок и видео)
-// ============================================================
 function initLightbox() {
     // Картинки с data-lightbox
     const lightboxImages = document.querySelectorAll('[data-lightbox]');
@@ -291,9 +267,6 @@ function initLightbox() {
     });
 }
 
-// ============================================================
-// 6. ОСНОВНАЯ ФУНКЦИЯ ПОИСКА
-// ============================================================
 function searchDictionary() {
     const query = searchInput.value.toLowerCase().trim();
     
@@ -338,9 +311,6 @@ function searchDictionary() {
     initLightbox();
 }
 
-// ============================================================
-// 7. СОБЫТИЯ
-// ============================================================
 searchBtn.addEventListener('click', searchDictionary);
 searchInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
@@ -362,9 +332,6 @@ resetBtn.addEventListener('click', function() {
     initLightbox();
 });
 
-// ============================================================
-// 8. ЗАПУСК ПРИ ЗАГРУЗКЕ
-// ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     initLightbox();
 });
