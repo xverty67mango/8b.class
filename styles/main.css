@@ -625,7 +625,7 @@ p {
     font-family: 'Montserrat', sans-serif !important;
 }
 /* ===== АДАПТИВ ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 28px;
     }
@@ -649,37 +649,26 @@ p {
 
     .gallery {
         display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px !important;
-        padding: 0 10px !important;
-        max-width: 100% !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .card {
-        width: calc(50% - 6px) !important;
-        max-width: 100% !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-        background-color: var(--color-bg-card);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .card img {
+        position: static !important;
         width: 100% !important;
-        height: auto !important;
-        border-radius: 8px;
-        display: block;
-        aspect-ratio: auto !important;
+        margin: 0 !important;
     }
 
-    .card p {
-        font-size: 13px !important;
-        margin-top: 8px !important;
-        text-align: center;
-        line-height: 1.3;
+    .card img,
+    .card video {
+        width: 100%;
+        height: auto;
+        display: block;
     }
+}
 
     .dictionary-list {
         padding: 20px;

@@ -297,10 +297,16 @@ if (hideBtn) {
 <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
 <script>
 let pckry = null;
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
+    if (window.innerWidth <= 768) {
+        return; // На телефоне Packery не запускаем
+    }
+
     const grid = document.querySelector('.gallery');
+
     if (grid) {
-        setTimeout(function() {
+        setTimeout(function () {
             pckry = new Packery(grid, {
                 itemSelector: '.card',
                 columnWidth: 280,
