@@ -636,11 +636,38 @@ p {
         font-size: 14px;
         padding: 6px 14px;
     }
+    
+    /* ===== КАРТОЧКИ В 2 КОЛОНКИ ===== */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 15px;
+        padding: 0 10px;
+    }
     .card {
         width: 100%;
-        max-width: 350px;
+        max-width: none;
+        padding: 10px;
+    }
+    .card img {
+        height: 150px; /* Можно уменьшить высоту на телефоне */
+    }
+    .card p {
+        font-size: 14px;
     }
     .dictionary-list {
         padding: 20px;
+    }
+}
+/* ===== АУДИОПЛЕЕР НА ТЕЛЕФОНЕ ===== */
+@media (max-width: 600px) {
+    audio {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 45px !important;
+    }
+    .audio-mini {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
