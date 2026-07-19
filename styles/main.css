@@ -13,6 +13,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 body {
     font-family: 'Montserrat', sans-serif; 
     background-color: var(--color-bg-main);
@@ -633,7 +636,6 @@ p {
         font-size: 16px;
     }
 
-    /* ===== МЕНЮ ===== */
     .main-nav {
         flex-wrap: wrap;
         gap: 8px;
@@ -645,34 +647,38 @@ p {
         padding: 6px 12px;
     }
 
-    /* ===== КАРТОЧКИ В 2 КОЛОНКИ ===== */
     .gallery {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Две колонки */
-        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
         padding: 0 10px;
         max-width: 100%;
     }
+
     .card {
-        width: 100%;          /* Карточка занимает всю колонку */
-        max-width: 100%;      /* Не растягивается дальше */
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    .card img {
-        height: 150px;        /* Уменьшаем высоту на телефоне */
         width: 100%;
-        object-fit: cover;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 0;
+        background-color: var(--color-bg-card);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
-    .card p {
-        font-size: 14px;
+
+    .card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
     }
 
     .dictionary-list {
         padding: 20px;
     }
 }
-/* ===== АУДИОПЛЕЕР НА ТЕЛЕФОНЕ ===== */
+
 @media (max-width: 600px) {
     audio {
         width: 100% !important;
@@ -686,5 +692,5 @@ p {
 }
 @media (max-width: 600px) {
     h1 {
-        font-size: 28px !important;  /* Уменьшаем заголовок */
+        font-size: 28px !important;
     }
