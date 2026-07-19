@@ -25,5 +25,7 @@ media.forEach(item => {
     }
 
     gallery.appendChild(card);
+console.log("Создана карточка",
+item.scr);
 
 });
