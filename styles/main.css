@@ -624,37 +624,50 @@ p {
 /* ===== АДАПТИВ ===== */
 @media (max-width: 600px) {
     h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
+    h2, h3 {
+        font-size: 22px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+
+    /* ===== МЕНЮ ===== */
     .main-nav {
         flex-wrap: wrap;
-        gap: 10px;
-        border-radius: 30px;
-        padding: 15px 10px;
+        gap: 8px;
+        padding: 12px 10px;
+        border-radius: 20px;
     }
     .main-nav a {
         font-size: 14px;
-        padding: 6px 14px;
+        padding: 6px 12px;
     }
-    
+
     /* ===== КАРТОЧКИ В 2 КОЛОНКИ ===== */
     .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Две колонки */
         gap: 15px;
         padding: 0 10px;
+        max-width: 100%;
     }
     .card {
-        width: 100%;
-        max-width: none;
+        width: 100%;          /* Карточка занимает всю колонку */
+        max-width: 100%;      /* Не растягивается дальше */
         padding: 10px;
+        box-sizing: border-box;
     }
     .card img {
-        height: 150px; /* Можно уменьшить высоту на телефоне */
+        height: 150px;        /* Уменьшаем высоту на телефоне */
+        width: 100%;
+        object-fit: cover;
     }
     .card p {
         font-size: 14px;
     }
+
     .dictionary-list {
         padding: 20px;
     }
