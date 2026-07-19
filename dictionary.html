@@ -3,51 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скотобойня 8Б — История</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Скотобойня 8Б — История класса</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="okay" href="favicon.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
-    <style>
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-        .close-lightbox {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            color: #fff;
-            font-size: 48px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            font-family: Arial, sans-serif;
-            z-index: 10000;
-        }
-        .close-lightbox:hover {
-            color: #ffd700;
-            transform: scale(1.2);
-        }
-    </style>
 </head>
 <body>
 
@@ -60,281 +21,27 @@
         <a href="dictionary.html" class="active">"История класса"</a>
     </nav>
 <p style="font-size: 16px; margin-bottom: 28px;">Если вы хотите, что бы я добавил именно <strong>ваши</strong> фотки или мемы, то вы можете мне написать лично мне <a href="https://t.me/xverty_x">сюда</a> и я добавлю их на этот сайт :)</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 30px;">
-    <input type="text" id="tagSearchDict" placeholder="Поиск по словарю..." style="...">
-    <button id="searchBtnDict" class="btn-sm-dictionary btn-sm-dictionary-primary">Найти</button>
-    <button id="resetBtnDict" class="btn-sm-dictionary btn-sm-dictionary-outline">Сбросить</button>
-</div>
-    <p style="margin-bottom: 20px;"><strong>Факты выделенные жирным шрифтом не являются подтвержденными.</strong></p>
-
-    <dl class="dictionary-list">
-
-        <dt class="term"> Габсбурги </dt>
-        <dd class="definition">В 6 классе по истории была тема габсбургов, так же с этими габсбургами была связана песня "Tonight you belong to me" (ай ноу ай ноу ю белонг). <br>
-            <audio controls class="audio-mini" controls playsinline controlsList="nodownload" style="width: 100%; max-width: 300px;">
-            <source src="audio/gabsburgsong.mp3" type="audio/mpeg">
-            </audio>
-            <img src="images/images.jpe" alt="Мем" class="inline-media" data-lightbox>
-        </dd>
-        <dt class="term">Хасбулатов</dt>
-        <dd class="definition">Измененное слово хорошо. Так же есть сокращение "хас"</dd>
-
-        <dt class="term">Панорамы</dt>
-        <dd class="definition"> Панорамы самый хайп сейчас. Посмотреть все (которые есть на сайте) панорамы можно в галерее, введя в поиск "Панорамы" :)<br>
-            <img src="images/photo3.jpg" alt="Мем" class="inline-media" data-lightbox>
-            <img src="images/photo8.jpg" alt="Мем" class="inline-media" data-lightbox>
-            <img src="images/photo7.jpg" alt="Мем" class="inline-media" data-lightbox> 
-        </dd>
-
-        <dt class="term">Девка фонька</dt>
-        <dd class="definition">Девка фонька обозначает чаще всего ничего, но может использоваться для чего-то милого. Девка фонька произошло от клички собаки Ксюши, "Феня" <br>
-            <img src="images/photo_2026-07-08_14-15-47.jpg" alt="Мем" class="inline-media" data-lightbox>
-            <img src="images/photo_2026-07-08_14-15-25.jpg" alt="Мем" class="inline-media" data-lightbox>
-        </dd>
-
-        <dt class="term">Дюгудюжник</dt>
-        <dd class="definition">Дюгудюжник это вымышленное слово <strong>которое придумали Маша и Ксюша</strong>. В интернете так называемый дюгудюжник выглядит так <br>
-            <img src="images/photo9.jpg" alt="Мем" class="inline-media" data-lightbox> 
-        </dd>
-
-        <dt class="term">"Дак мама, я тут какаю"</dt>
-        <dd class="definition">16 ноября 2025 в 3:09 Лера записала лосовое сообщение ниже, в котором говорит своей маме что она какает, такая комичная фраза очень быстро стала мемом
-            <audio controls class="audio-mini" controls playsinline controlsList="nodownload" style="width: 100%; max-width: 300px;">
-    <source src="audio/mamayatut.ogg" type="audio/mpeg">
-    Ваш браузер не поддерживает аудио.
-              </audio>
-        </dd>
-
-        <dt class="term">Свадьба Леры и Ромы</dt>
-        <dd class="definition">В 6 классе 14 октября была проведена свадьба между Лерой и Ромой, на данный момент лера и рома в разводе, а их ребенок умер, земля ему пухом. Вот кстати видеосики🥰🥺<br>
-                 <video controls width="100%" style="max-width: 400px; border-radius: 12px; margin-top: 10px;">
-        <source src="videos/svadba.mp4" type="video/mp4">
-        Твой браузер не поддерживает видео.
-    </video> 
-                 <video controls width="100%" style="max-width: 400px; border-radius: 12px; margin-top: 10px;">
-        <source src="videos/svadba1.mp4" type="video/mp4">
-        Твой браузер не поддерживает видео.
-    </video>
-            </dd>
-
-    </dl>
-
-<div id="lightbox" class="lightbox">
-    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-    
-    <img class="lightbox-content" id="lightboxImg" src="" style="display: none;">
-</div>
-    <div class="footer">
-        8Б лучшие <3
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 30px;">
+        <input type="text" id="tagSearchDict" placeholder="Поиск по словарю...">
+        <button id="searchDictBtn" class="btn-sm btn-sm-primary">Найти</button>
+        <button id="resetDictBtn" class="btn-sm btn-sm-outline">Сбросить</button>
     </div>
 
-<button id="themeToggle">
-    <i class="fas fa-moon"></i>
-</button>
-<script>
+    <dl class="dictionary-list"></dl>
 
-const toggle = document.getElementById('themeToggle');
+    <div class="footer">8Б лучшие <3</div>
 
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-    toggle.innerHTML = '<i class="fas fa-sun"></i>';
-}
+    <button id="themeToggle"><i class="fas fa-moon"></i></button>
 
-
-toggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    
-    this.innerHTML = isDark ? 
-        '<i class="fas fa-sun"></i>': 
-        '<i class="fas fa-moon"></i>';
-});
-</script>
-<script>
-
-const terms = document.querySelectorAll('.term');
-const definitions = document.querySelectorAll('.definition');
-const searchInput = document.getElementById('tagSearchDict');
-const searchBtn = document.getElementById('searchBtnDict');
-const resetBtn = document.getElementById('resetBtnDict');
-
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxVideo = document.getElementById('lightboxVideo'); 
-
-let dictionaryData = [];
-terms.forEach((term, index) => {
-    const definition = definitions[index] ? definitions[index].textContent : '';
-    dictionaryData.push({
-        termElement: term,
-        definitionElement: definitions[index],
-        text: (term.textContent + ' ' + definition).toLowerCase()
-    });
-});
-
-const fuse = new Fuse(dictionaryData, {
-    keys: ['text'],
-    threshold: 0.4,
-    ignoreLocation: true,
-    minMatchCharLength: 2
-});
-
-function highlightText(element, query) {
-    const words = query.split(/\s+/);
-    let html = element.innerHTML;
-    words.forEach(word => {
-        const regex = new RegExp(`(${word})`, 'gi');
-        html = html.replace(regex, '<mark class="highlight">$1</mark>');
-    });
-    element.innerHTML = html;
-}
-
-function openLightbox(src) {
-    if (lightbox && lightboxImg) {
-        lightboxImg.src = src;
-        lightboxImg.style.display = 'block';
-        if (lightboxVideo) lightboxVideo.style.display = 'none';
-        lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function openLightboxVideo(src) {
-    if (lightbox && lightboxVideo) {
-        const source = lightboxVideo.querySelector('source');
-        if (source) {
-            source.src = src;
-            lightboxVideo.load();
-        }
-        lightboxVideo.style.display = 'block';
-        if (lightboxImg) lightboxImg.style.display = 'none';
-        lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeLightbox() {
-    if (lightbox) {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = '';
-        if (lightboxVideo) {
-            lightboxVideo.pause();
-        }
-    }
-}
-
-if (lightbox) {
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeLightbox();
-        }
-    });
-}
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeLightbox();
-    }
-});
-
-function initLightbox() {
-    // Картинки с data-lightbox
-    const lightboxImages = document.querySelectorAll('[data-lightbox]');
-    lightboxImages.forEach(img => {
-        img.removeEventListener('click', img._lightboxHandler);
-        const handler = function() {
-            openLightbox(this.src);
-        };
-        img._lightboxHandler = handler;
-        img.addEventListener('click', handler);
-        img.style.cursor = 'pointer';
-    });
-
-    // Видео с data-lightbox-video
-    const lightboxVideos = document.querySelectorAll('[data-lightbox-video]');
-    lightboxVideos.forEach(video => {
-        video.removeEventListener('click', video._lightboxVideoHandler);
-        const handler = function() {
-            const src = this.getAttribute('src');
-            if (src) {
-                openLightboxVideo(src);
-            }
-        };
-        video._lightboxVideoHandler = handler;
-        video.addEventListener('click', handler);
-        video.style.cursor = 'pointer';
-    });
-}
-
-function searchDictionary() {
-    const query = searchInput.value.toLowerCase().trim();
-    
-    // Сначала скрываем все блоки
-    terms.forEach(term => {
-        term.style.display = 'none';
-        const dd = term.nextElementSibling;
-        if (dd && dd.tagName === 'DD') {
-            dd.style.display = 'none';
-        }
-    });
-
-    if (!query) {
-        terms.forEach(term => {
-            term.style.display = 'block';
-            const dd = term.nextElementSibling;
-            if (dd && dd.tagName === 'DD') {
-                dd.style.display = 'block';
-            }
-        });
-        initLightbox();
-        return;
-    }
-
-    const results = fuse.search(query);
-
-    results.forEach(result => {
-        const termElement = result.item.termElement;
-        const definitionElement = result.item.definitionElement;
-        
-        termElement.style.display = 'block';
-        if (definitionElement) {
-            definitionElement.style.display = 'block';
-        }
-
-        highlightText(termElement, query);
-        if (definitionElement) {
-            highlightText(definitionElement, query);
-        }
-    });
-
-    initLightbox();
-}
-
-searchBtn.addEventListener('click', searchDictionary);
-searchInput.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        searchDictionary();
-    }
-});
-
-resetBtn.addEventListener('click', function() {
-    searchInput.value = '';
-    terms.forEach(term => {
-        term.style.display = 'block';
-        term.innerHTML = term.textContent;
-        const dd = term.nextElementSibling;
-        if (dd && dd.tagName === 'DD') {
-            dd.style.display = 'block';
-            dd.innerHTML = dd.textContent;
-        }
-    });
-    initLightbox();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    initLightbox();
-});
-</script>
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+    <script src="js/dictionary-data.js" defer></script>
+    <script src="js/dictionary.js" defer></script>
+    <script src="js/dictionary-search.js" defer></script>
+    <script src="js/lightbox.js" defer></script>
+    <script src="js/theme.js" defer></script>
 </body>
 </html>
