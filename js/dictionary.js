@@ -47,20 +47,28 @@
             dd.appendChild(audio);
         }
 
-        // === КАРТИНКИ (если есть) ===
-        if (item.images && item.images.length > 0) {
-            item.images.forEach(src => {
-                const br = document.createElement('br');
-                dd.appendChild(br);
+        // === КАРТИНКИ (горизонтальный ряд) ===
+if (item.images && item.images.length > 0) {
+    // Создаём контейнер для картинок
+    const container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexWrap = 'wrap'; // Если не влезают — переносим на новую строку
+    container.style.gap = '12px';
+    container.style.justifyContent = 'center';
+    container.style.alignItems = 'center';
+    container.style.marginTop = '10px';
 
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = item.term;
-                img.className = 'inline-media';
-                img.setAttribute('data-lightbox', '');
-                dd.appendChild(img);
-            });
-        }
+    item.images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = item.term;
+        img.className = 'inline-media';
+        img.setAttribute('data-lightbox', '');
+        container.appendChild(img);
+    });
+
+    dd.appendChild(container);
+}
 
         // === ВИДЕО (если есть) ===
         if (item.videos && item.videos.length > 0) {
